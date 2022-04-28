@@ -6,8 +6,8 @@ const Alert = (title, message, type, time) => {
 
   const currentDuration = time ?? 40;
   const alertImagePath = {
-    success: '/assets/img/alert-icon-sucess.svg',
-    error: '/assets/img/alert-icon-error.svg'
+    success: './assets/img/alert-icon-sucess.svg',
+    error: './assets/img/alert-icon-error.svg'
   }
 
 
