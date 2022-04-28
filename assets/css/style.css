@@ -1,0 +1,173 @@
+@import url(./global.css);
+@import url(./alert.css);
+
+
+.header .brand{
+  width: 54px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header .brand img{
+  max-width: 32px;
+}
+
+
+
+.main .encrypt{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 16px;
+  background: var(--color-paper);
+  padding: 32px 16px;
+  border-radius: 8px;
+  height: calc(100% - 44px);
+  box-shadow: 3px 3px 12px var(--color-box-shadow);
+}
+
+.main .encrypt .form-group{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  gap: 16px;
+}
+
+.main .encrypt .form-group.row{
+  flex-direction: row;
+}
+
+.main .encrypt .form-group.column{
+  flex-direction: column;
+}
+
+.main .encrypt .form-label{
+  display: none;
+}
+
+.main .encrypt .form-group:nth-child(1){
+  flex-grow: 1;
+  height: calc(100% - (var(--btn-height) + 32px + 32px));
+}
+
+.main .encrypt #message{
+  background: var(--color-message);
+  resize: none;
+  padding-left: 15px;
+  padding-top: 15px;
+  line-height: 1.5;
+  height: 100%;
+  width: 100%;
+}
+
+.main .encrypt #message:focus{
+  outline: 2px solid rgb(48, 111, 228);
+}
+
+.main .error #message,
+.main .error #message:focus{
+  outline: 1px solid var(--color-error);
+}
+
+.main .encrypt .form-group .btn{
+  width: calc((100% / 2) - 8px);
+}
+
+.main .encrypt .container-info{
+  align-items: center;
+  height: 32px;
+}
+
+.main .encrypt .container-info .info-icon{
+  height: 16px;
+}
+
+.main .encrypt .container-info .info-icon svg{
+  width: 100%;
+  height: auto;
+}
+
+.main .error .container-info *{
+  color: var(--color-error);
+  fill: var(--color-error);
+}
+
+
+.main .content-result .title{
+  display: none;
+}
+
+@media (max-width: 980px){
+  .main .content .encrypt{
+    height: auto;
+  }
+  .main .content-result .title{
+    display: block;
+  }
+}
+.main .content-result .btn-copy{
+  display: none;
+}
+
+.main .content-result img{
+  width: calc(100% - 64px);
+  height: auto;
+}
+
+.main .showContent{
+  justify-content: space-between;
+}
+
+.main .showContent img,
+.main .showContent > p:not(.message){
+  display: none;
+}
+
+.main .showContent .btn-copy{
+  display: inherit;
+  order: 2;
+}
+
+.main .content-result p{
+  color: #aaa;
+  width: 100%;
+  text-align: center;
+  max-width: calc(100% - 32px);
+  line-height: 1.5;
+}
+
+.main .content-result p.message{
+  padding: 8px 16px;
+  border-radius: 4px;
+  background: rgb(99, 142, 223);
+  color: #dedede;
+  font-size: 15px;
+  display: block;
+  line-height: 1.5;
+  order: 1;
+}
+
+
+@media (max-width: 590px){
+  .main .encrypt .container-info .info-text{
+    font-size: 13px;
+  }
+  .main .content-result p.message{
+    padding: 8px 16px;
+    border-radius: 4px;
+    background: rgb(99, 142, 223);
+    color: #dedede;
+    font-size: 15px;
+    display: block;
+    line-height: 1.5;
+    order: 1;
+    max-width: unset;
+  }
+
+  .main .encrypt .form-group .btn{
+    width: 100%;
+  }
+}

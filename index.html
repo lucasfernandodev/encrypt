@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Encrypt | Criptografe ou descriptografe suas mensagens</title>
+
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="shortcut icon" href="./assets/img/security-svgrepo-com.svg" type="image/svg">
+  </head>
+  <body class="dark">
+    <div class="wrapper">
+      <header class="header">
+        <div class="brand">
+          <img src="./assets/img/security-svgrepo-com.svg" />
+        </div>
+
+        <div class="button-toggle" data-selected="default" data-type="lang">
+          <div class="option" data-option="default">PT</div>
+          <div class="option" data-option="secondary">EN</div>
+        </div>
+
+        <div class="button-toggle" data-selected="default" data-type="theme">
+          <div class="option" data-option="default">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+              <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+              <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z"></path>
+           </svg>
+          </div>
+          <div class="option" data-option="secondary">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+              <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+              <circle cx="12" cy="12" r="4"></circle>
+              <path d="M3 12h1m8 -9v1m8 8h1m-9 8v1m-6.4 -15.4l.7 .7m12.1 -.7l-.7 .7m0 11.4l.7 .7m-12.1 -.7l-.7 .7"></path>
+           </svg>
+          </div>
+        </div>
+      </header>
+      <main class="main">
+        <article class="content">
+          <div class="encrypt">
+            <div class="form-group column">
+              <label for="message" class="form-label">Digite o seu texto</label>
+              <textarea
+                name="message"
+                id="message"
+                cols="30"
+                rows="10"
+                placeholder="Digite sua mensagem aqui..."
+              ></textarea>
+            </div>
+            <div class="form-group container-info">
+              <div class="info-icon">
+                <svg width="16" height="16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16 8A8 8 0 11-.001 8 8 8 0 0116 8zM8 4a.905.905 0 00-.9.995l.35 3.507a.552.552 0 001.1 0l.35-3.507A.905.905 0 008 4zm.002 6a1 1 0 100 2 1 1 0 000-2z" fill="#495057"/></svg>
+              </div>
+              <span class="info-text"
+                >Apenas letras minúsculas e sem acento.</span
+              >
+            </div>
+            <div class="form-group">
+              <button class="btn btn-encrypt">Criptografar</button>
+              <button class="btn btn-decrypt btn-secondary">
+                Descriptografar
+              </button>
+            </div>
+          </div>
+        </article>
+        <aside class="content-result">
+          <h3 class="title">Nenhuma mensagem encontrada</h3>
+          <img src="./assets/img/no-message.svg" />
+          <p class="only-result-text">
+            Digite um texto que você deseja criptografar ou descriptografar.
+          </p>
+          <button class="btn btn-copy btn-secondary">Copiar texto</button>
+        </aside>
+      </main>
+      <!-- <footer class="footer">by lucas</footer> -->
+    </div>
+
+    <script type="module" src="./assets/js/index.js" defer></script>
+  </body>
+</html>
